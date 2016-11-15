@@ -4,8 +4,8 @@
   "description": "Beam react children to other parts of the React subtree",
   "main": "dist/index.js",
   "scripts": {
-    "watch": "./node_modules/.bin/babel StripeCheckout.js --out-file ./dist/main.js --source-maps inline --watch",
-    "build": "./node_modules/.bin/babel StripeCheckout.js --out-file ./dist/main.js",
+    "watch": "./node_modules/.bin/babel src --out-dir dist --source-maps inline --watch",
+    "build": "./node_modules/.bin/babel src --out-dir dist",
     "version": "npm run build"
   },
   "author": "Adam Zmenak <adam.zmenak@gmail.com>",
@@ -68,7 +68,8 @@
             "style"
           ]
         }
-      ]
+      ],
+      "react/jsx-filename-extension": 0
     }
   },
   "keywords": [
