@@ -6,6 +6,10 @@ when needed. Originally designed for use with React Router in an app
 which has a common element such as a header with a title, where
 a component in the page subtree might want to change the title.
 
+## Install
+
+    npm i @azmenak/react-beam
+
 ## Api
 
 ### `Receiver`
@@ -27,7 +31,7 @@ import { Receiver } from 'react-beam';
 Always renders null.
 
 ```js
-import { Receiver } from 'react-beam;
+import { Transmitter } from 'react-beam';
 ```
 
 #### Props
