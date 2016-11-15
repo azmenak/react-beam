@@ -1,0 +1,102 @@
+{
+  "name": "react-beam",
+  "version": "1.0.0",
+  "description": "Beam react children to other parts of the React subtree",
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "./node_modules/.bin/babel StripeCheckout.js --out-file ./dist/main.js --source-maps inline --watch",
+    "build": "./node_modules/.bin/babel StripeCheckout.js --out-file ./dist/main.js",
+    "version": "npm run build"
+  },
+  "author": "Adam Zmenak <adam.zmenak@gmail.com>",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true,
+      "es6": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "arrow-parens": ["error", "as-needed"],
+      "import/no-unresolved": 2,
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "no-console": 1,
+      "max-len": 0,
+      "prefer-template": 2,
+      "no-use-before-define": 0,
+      "newline-per-chained-call": 0,
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
+      "react/prop-types": [
+        2,
+        {
+          "ignore": [
+            "dispatch",
+            "children",
+            "className",
+            "style"
+          ]
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "react",
+    "teleport",
+    "tele",
+    "beam",
+    "outside",
+    "rendering",
+    "inject",
+    "subtree",
+    ""
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.10.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.0"
+  },
+  "peerDependencies": {
+    "react": "^15.3.2"
+  }
+}
