@@ -7,13 +7,17 @@ export default class Transmitter extends React.Component {
   }
 
   componentDidMount() {
-    emitter.emit(`render:${this.props.link}`);
+    emitter.emit(`render:${this.props.link}`, this.props.children);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.children !== this.props.children) {
-      emitter.emit(`render:${this.props.link}`);
+    if (nextProps.children !== this.props.children || nextProps.link !== this.props.link) {
+      emitter.emit(`render:${nextProps.link}`, nextProps.children);
     }
+  }
+
+  componentWillUnmount() {
+    emitter.emit(`render:${this.props.link}`, null);
   }
 
   render() {
